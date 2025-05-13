@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 5px;
+    }
+    button {
+      padding: 10px 15px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Job Application Form</h1>
+
+  <form>
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label>First Name* <input type="text" required /></label>
+      <label>Last Name* <input type="text" required /></label>
+      <label>Date of Birth <input type="date" /></label>
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" /> Male</label>
+        <label><input type="radio" name="gender" /> Female</label>
+        <label><input type="radio" name="gender" /> Other</label>
+      </div>
+      <label>Profile Picture* <input type="file" required /></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact Information</legend>
+      <label>Email* <input type="email" required /></label>
+      <label>Phone Number* <input type="tel" pattern="[0-9]{10}" required /></label>
+      <label>Address <textarea rows="3"></textarea></label>
+      <label>Country
+        <select>
+          <option value="India">India</option>
+          <option value="USA">USA</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Education Background</legend>
+      <label>Highest Qualification
+        <select>
+          <option>Graduate</option>
+          <option>Post-Graduate</option>
+          <option>Diploma</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Specialization <input type="text" /></label>
+      <label>Year of Graduation <input type="number" /></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Job Preferences</legend>
+      <label>Preferred Role <input type="text" /></label>
+      <label>Expected Salary <input type="text" /></label>
+      <label>Preferred Locations</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" /> Bangalore</label>
+        <label><input type="checkbox" /> Delhi</label>
+        <label><input type="checkbox" /> Remote</label>
+        <label><input type="checkbox" /> Pune</label>
+      </div>
+      <label><input type="checkbox" /> Willing to Relocate?</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Create Account</legend>
+      <label>Password* <input type="password" minlength="6" required /></label>
+      <label>Confirm Password* <input type="password" minlength="6" required /></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Resume</legend>
+      <label>Upload Resume (PDF only)* <input type="file" accept="application/pdf" required /></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Agreement</legend>
+      <label><input type="checkbox" required /> I agree to the terms and conditions*</label>
+    </fieldset>
+
+    <button type="submit">Submit Application</button>
+    <button type="reset">Reset Form</button>
+  </form>
+</body>
+</html>
